@@ -12,3 +12,41 @@ header {
 a {
   color: #1d4ed8;
 }
+
+nav a[aria-current="page"] {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+nav a:not([aria-current="page"]) {
+  color: #64748b;
+}
+
+nav a:hover {
+  color: #1e293b;
+}
+
+nav a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.card {
+  border: 1px solid #e2e8f0;
+}
+
+h2 + .card {
+  border-top: 2px solid #2563eb;
+}
+
+.badge:empty {
+  display: none;
+}
+
+article:has(.badge:not(:empty)) {
+  border-color: #2563eb;
+}
+
+button[aria-label] {
+  padding: 0.25rem 0.5rem;
+}
